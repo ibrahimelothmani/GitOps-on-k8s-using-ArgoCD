@@ -8,6 +8,8 @@ Think of Argo CD as a persistent watchdog that lives inside your cluster. To und
 
 # The "Push" vs. "Pull" Model
 
+![Argo CD GitOps Architecture](GitOps.jpg)
+
 Traditional tools like the one I mentioned above use a "Push" model. In this setup, an external pipeline sends commands (like kubectl apply) into your cluster. This is risky because you must store sensitive cluster administrative keys inside your external CI tool. If your CI tool is compromised, your cluster is, too.
 
 Argo CD flips this script using a "Pull" model:
